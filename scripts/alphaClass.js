@@ -17,12 +17,31 @@ function handleKeyboardKeyUpEvent(event) {
   console.log(playerPressed, expectedAlphabet);
   if (playerPressed === expectedAlphabet) {
     console.log("you get a point");
-    const currentScoreElement =document.getElementById('current-score')
-    const currentScoreText = currentScoreElement.innerText;
-    console.log(currentScoreText);
-    const currentScore =parseInt(currentScoreText);
-    const newScore = currentScore+1;
-    currentScoreElement.innerText =newScore;
+    const currentScore = getTextElementValueById('current-score');
+    console.log(currentScore);
+    const updatedScore = currentScore+1;
+    setTextElementByValueId('current-score',updatedScore)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     const currentScoreElement =document.getElementById('current-score')
+//     const currentScoreText = currentScoreElement.innerText;
+//     console.log(currentScoreText);
+//     const currentScore =parseInt(currentScoreText);
+    // const newScore = currentScore+1;
+//     currentScoreElement.innerText =newScore;
+
 
 
 
@@ -32,14 +51,25 @@ function handleKeyboardKeyUpEvent(event) {
     removeBackgroundColorById(expectedAlphabet);
     
     continueGame();
+  
     
   } else {
-    console.log("you missed you lost a point and a life");
-    const currentLifeElement = document.getElementById('current-life');
-    const currentLifeText = currentLifeElement.innerText;
-    const currentlife = parseInt(currentLifeText);
-    const newLife = currentlife-1;
-    currentLifeElement.innerText = newLife;
+
+    const currentLife = getTextElementValueById('current-life');
+    const updatedlife = currentLife -1;
+    setTextElementByValueId('current-life',updatedlife)
+
+
+
+
+
+
+//     console.log("you missed you lost a point and a life");
+//     const currentLifeElement = document.getElementById('current-life');
+//     const currentLifeText = currentLifeElement.innerText;
+//     const currentlife = parseInt(currentLifeText);
+//     const newLife = currentlife-1;
+//     currentLifeElement.innerText = newLife;
     
   }
 }
