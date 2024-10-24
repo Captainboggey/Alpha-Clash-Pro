@@ -104,6 +104,9 @@ function gameOver(){
     hideElementById('play-ground');
     showElementById('final-score');
     const lastScore =getTextElementValueById('current-score');
-
+    setTextElementByValueId('game-score',lastScore);
+    const currentAlphabet = getELementTextById('current-alphabet')
+    // console.log(currentAlphabet)
+    removeBackgroundColorById(currentAlphabet);
 
 }
