@@ -91,11 +91,19 @@ function continueGame() {
 
 function play() {
   hideElementById("home-screen");
+  hideElementById('final-score')
   showElementById("play-ground");
+  setTextElementByValueId('current-life',5);
+  setTextElementByValueId('current-score',0);
+
+
+
   continueGame();
 }
 function gameOver(){
     hideElementById('play-ground');
-    showElementById('final-score')
+    showElementById('final-score');
+    const lastScore =getTextElementValueById('current-score');
+
 
 }
